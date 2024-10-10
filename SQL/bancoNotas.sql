@@ -30,7 +30,8 @@ PRIMARY KEY (D_cod);
 CREATE TABLE Matricula (
 matricula integer not null,
 D_cod integer not null,
-P_cod integer not null
+P_cod integer not null,
+media_final decimal (2, 2)
 );
 
 -- PK da tabela Matricula:
@@ -44,3 +45,7 @@ FOREIGN KEY (matricula) REFERENCES Aluno (matricula);
 -- FK codigo do Professor:
 ALTER TABLE Matricula ADD CONSTRAINT fk_professor_matricula
 FOREIGN KEY (P_cod) REFERENCES Professor (P_cod);
+
+-- FK codigo da Disciplina:
+ALTER TABLE Matricula ADD CONSTRAINT fk_disciplina_matricula
+FOREIGN KEY (D_cod) REFERENCES Disciplina (D_cod);
