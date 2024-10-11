@@ -20,8 +20,8 @@ ALTER TABLE Professor ADD CONSTRAINT pk_professor
 PRIMARY KEY (P_cod);
 
 CREATE TABLE Disciplina (
-D_cod integer,
-nome varchar (150)
+D_cod integer not null,
+nome varchar (150) not null
 );
 -- PK da tabela Disciplina:
 ALTER TABLE Disciplina ADD CONSTRAINT pk_disciplina
